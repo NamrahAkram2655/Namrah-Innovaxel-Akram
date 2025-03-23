@@ -17,6 +17,7 @@ const UrlShortner = ({ backendUrl }) => {
       setShortUrl(`${backendUrl}/${response.data.shortCode}`);
       setError("");
     } catch (err) {
+      console.log(err.message);
       setError("Failed to create short URL.");
     }
   };

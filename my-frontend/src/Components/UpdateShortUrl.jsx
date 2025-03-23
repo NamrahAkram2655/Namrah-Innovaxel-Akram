@@ -1,4 +1,3 @@
-// UpdateShortUrl.js
 import React, { useState } from "react";
 import axios from "axios";
 
@@ -19,6 +18,7 @@ const UpdateShortUrl = ({ backendUrl }) => {
       setUpdatedUrl(response.data.url);
       setError("");
     } catch (err) {
+      console.log(err.message);
       setError("Failed to update URL.");
     }
   };
