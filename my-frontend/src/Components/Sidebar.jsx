@@ -16,27 +16,24 @@ const Sidebar = () => {
 
   return (
     <div>
-      {/* Overlay (only visible when sidebar is open on mobile) */}
       {isSidebarOpen && (
         <div
           className="lg:hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-20"
-          onClick={closeSidebar} // Clicking on the overlay closes the sidebar
+          onClick={closeSidebar}
         ></div>
       )}
 
-      {/* Hamburger Menu Button (only on mobile) */}
       <div
         className="lg:hidden p-4 text-white cursor-pointer absolute top-4 left-4 z-30"
         onClick={toggleSidebar}
       >
         {isSidebarOpen ? (
-          <span className="text-2xl">X</span> // Close icon
+          <span className="text-2xl">X</span>
         ) : (
-          <span className="text-2xl">☰</span> // Hamburger icon
+          <span className="text-2xl">☰</span>
         )}
       </div>
 
-      {/* Sidebar */}
       <div
         className={`${
           isSidebarOpen ? "block" : "hidden"
@@ -88,18 +85,14 @@ const Sidebar = () => {
               Statistics
             </Link>
           </li>
-          
         </ul>
       </div>
 
-      {/* Main content area (does not shift layout) */}
       <div
         className={`lg:pl-64 p-4 transition-all duration-300 ${
           isSidebarOpen ? "ml-0" : ""
         }`}
-      >
-        {/* Main content goes here */}
-      </div>
+      ></div>
     </div>
   );
 };
