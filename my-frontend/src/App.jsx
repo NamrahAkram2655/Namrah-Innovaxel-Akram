@@ -8,6 +8,7 @@ import GetStatistics from "./Components/GetStatistics";
 import Sidebar from "./Components/Sidebar";
 
 function App() {
+  
   const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
   return (

@@ -13,6 +13,7 @@ const DeleteShortUrl = ({ backendUrl }) => {
       await axios.delete(`${backendUrl}/api/shorten/${shortCode}`);
       setMessage("URL deleted successfully.");
     } catch (err) {
+      console.log(err.message);
       setMessage("Failed to delete URL.");
     }
   };

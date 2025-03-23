@@ -17,6 +17,7 @@ const Originalurl = ({ backendUrl }) => {
       setOriginalUrl(response.data.url);
       setError("");
     } catch (err) {
+      console.log(err.message);
       setError("URL not found.");
     }
   };

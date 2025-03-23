@@ -1,4 +1,3 @@
-// GetStatistics.js
 import React, { useState } from "react";
 import axios from "axios";
 
@@ -17,6 +16,7 @@ const GetStatistics = ({ backendUrl }) => {
       setStatistics(response.data);
       setError("");
     } catch (err) {
+      console.log(err.message);
       setError("Failed to fetch statistics.");
     }
   };
