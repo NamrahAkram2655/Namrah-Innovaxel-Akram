@@ -1,6 +1,5 @@
-import shortid from "shortid"; 
-import Url from "../models/UrlSchema.js"; 
-
+import shortid from "shortid";
+import Url from "../models/UrlSchema.js";
 
 const createShortUrl = async (req, res) => {
   const { url } = req.body;
@@ -29,7 +28,6 @@ const createShortUrl = async (req, res) => {
   }
 };
 
-// Retrieve original URL from short URL
 const retrieveOriginalUrl = async (req, res) => {
   const { shortCode } = req.params;
 
@@ -54,7 +52,6 @@ const retrieveOriginalUrl = async (req, res) => {
   }
 };
 
-// Update an existing short URL
 const updateShortUrl = async (req, res) => {
   const { shortCode } = req.params;
   const { url } = req.body;
@@ -86,7 +83,6 @@ const updateShortUrl = async (req, res) => {
   }
 };
 
-// Delete a short URL
 const deleteShortUrl = async (req, res) => {
   const { shortCode } = req.params;
 
@@ -102,7 +98,6 @@ const deleteShortUrl = async (req, res) => {
   }
 };
 
-// Get statistics for a short URL
 const getStatistics = async (req, res) => {
   const { shortCode } = req.params;
 
